@@ -27,9 +27,9 @@
 
         <TextView
             android:id="@+id/tvListDisplay"
-            android:layout_width="338dp"
-            android:layout_height="424dp"
-            android:layout_marginTop="64dp"
+            android:layout_width="393dp"
+            android:layout_height="480dp"
+            android:layout_marginTop="16dp"
             android:background="#F8FBF4F4"
             android:text="Display List"
             android:textAlignment="center"
@@ -42,29 +42,37 @@
             android:id="@+id/btnDisplayList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#2AB3C3"
             android:text="Display List"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="513dp" />
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvListDisplay" />
 
         <Button
             android:id="@+id/btnFilterList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#2AB3C3"
             android:text="Filtered List"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="589dp" />
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDisplayList" />
 
         <Button
             android:id="@+id/btnReturn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
             android:backgroundTint="#2AB3C3"
             android:text="Return to Main Screen"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFilterList" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

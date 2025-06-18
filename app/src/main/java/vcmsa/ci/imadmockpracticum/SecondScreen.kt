@@ -34,8 +34,8 @@ class SecondScreen : AppCompatActivity() {
         fun displayAll() {
             val output = StringBuilder()
             //Table headers with fixed-width columns
-            output.append(String.format("%-5s%-15s%-15s%-10s%-20s\n", "Number", "Item Name", "Category", "Quantity", "Comment"))
-            output.append("---------------------------------------------------------------------\n")
+            output.append(String.format("%-5s%-5s%-5s%-5s%-20s\n", "No.", "Item", "Category", "Quantity", "Comment"))
+            output.append("---------------------------------\n")
 
             for (i in itemName.indices) {
                 output.append(
@@ -74,6 +74,7 @@ class SecondScreen : AppCompatActivity() {
         btnReturn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }// end of onCreate
 }//end of SecondScreen
