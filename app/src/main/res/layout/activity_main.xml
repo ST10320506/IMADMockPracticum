@@ -17,41 +17,64 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <ImageView
+            android:id="@+id/backgroundImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/travelbackgroundfour" />
+
         <TextView
             android:id="@+id/tvPackingList"
-            android:layout_width="243dp"
-            android:layout_height="71dp"
-            android:layout_marginTop="48dp"
+            android:layout_width="305dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="180dp"
+            android:fontFamily="cursive"
             android:text="Packing List"
             android:textAlignment="center"
-            android:textSize="34sp"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:backgroundTint="#2AB3C3"
+            android:text="Add to Packing list"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPackingList" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:backgroundTint="#2AB3C3"
+            android:text="Exit App"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnNavigate" />
+
+        <Button
+            android:id="@+id/btnNavigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="#2AB3C3"
+            android:text="Second Screen"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add to Packing list"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="285dp" />
-
-    <Button
-        android:id="@+id/btnExit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Exit App"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="552dp" />
-
-    <Button
-        android:id="@+id/btnNavigate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Second Screen"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="411dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

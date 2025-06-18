@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         val btnExit = findViewById<Button>(R.id.btnExit)
 
         //Call the button functions
+        btnExit.setOnClickListener {
+            finish()
+        }
         btnAdd.setOnClickListener {
             //Display addDialogBox
             val intent = Intent(this, SecondScreen::class.java)
