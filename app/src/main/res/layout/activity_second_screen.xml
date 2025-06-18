@@ -15,14 +15,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/backgroundTwoImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/travelbackgroundfour" />
+
         <TextView
             android:id="@+id/tvListDisplay"
-            android:layout_width="384dp"
-            android:layout_height="441dp"
+            android:layout_width="338dp"
+            android:layout_height="424dp"
+            android:layout_marginTop="64dp"
+            android:background="#F8FBF4F4"
             android:text="Display List"
-            android:textSize="34sp"
-            tools:layout_editor_absoluteX="11dp"
-            tools:layout_editor_absoluteY="48dp" />
+            android:textAlignment="center"
+            android:textSize="29sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btnDisplayList"
@@ -44,8 +58,13 @@
             android:id="@+id/btnReturn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#2AB3C3"
             android:text="Return to Main Screen"
-            tools:layout_editor_absoluteX="110dp"
-            tools:layout_editor_absoluteY="667dp" />
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
