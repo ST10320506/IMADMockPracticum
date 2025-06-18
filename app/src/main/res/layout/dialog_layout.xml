@@ -5,6 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="341dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="48dp"
+        android:text="Please enter the necessary details of the items for the packing list below."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/edtItemName"
         android:layout_width="368dp"
@@ -16,17 +28,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/edtCategory"
         android:layout_width="370dp"
         android:layout_height="55dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Category"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtItemName" />
 
@@ -34,7 +47,7 @@
         android:id="@+id/edtQuantity"
         android:layout_width="305dp"
         android:layout_height="51dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Quantity"
         android:inputType="text"
@@ -46,7 +59,7 @@
         android:id="@+id/edtComments"
         android:layout_width="381dp"
         android:layout_height="52dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="Comments"
         android:inputType="text"
@@ -54,17 +67,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtQuantity" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="170dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="36dp"
-        android:text="Item Details"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,54 @@ class SecondScreen : AppCompatActivity() {
         }// end of ViewCompat
 
         //Declaring GUI variables for Second Screen
+        val tvListDisplay = findViewById<TextView>(R.id.tvListDisplay)
+        val btnDisplayList = findViewById<Button>(R.id.btnDisplayList)
+        val btnFilterList = findViewById<Button>(R.id.btnFilterList)
         val btnReturn = findViewById<Button>(R.id.btnReturn)
+
+        val itemName = intent.getStringArrayListExtra("Item") ?: arrayListOf()
+        val categories = intent.getStringArrayListExtra("Category") ?: arrayListOf()
+        val quantities = intent.getIntegerArrayListExtra("Quantity") ?: arrayListOf()
+        val comments = intent.getStringArrayListExtra("Comments") ?: arrayListOf()
+
+        fun displayAll() {
+            val output = StringBuilder()
+            //Table headers with fixed-width columns
+            output.append(String.format("%-5s%-15s%-15s%-10s%-20s\n", "Number", "Item Name", "Category", "Quantity", "Comment"))
+            output.append("---------------------------------------------------------------------\n")
+
+            for (i in itemName.indices) {
+                output.append(
+                    String.format(
+                        "%-5s%-15s%-15s%-10s%-20s\n",
+                        i + 1,
+                        itemName[i],
+                        categories[i],
+                        quantities[i],
+                        comments[i]
+                    )
+                )
+            }
+            tvListDisplay.text = output.toString()
+        }
+
+        fun displayFiltered() {
+            val output = StringBuilder()
+            for (i in itemName.indices) {
+                if (quantities[i] >= 2) {
+                    output.append("${itemName[i]} (quantity: ${quantities[i]})\n")
+                }
+            }
+            tvListDisplay.text = output.toString()
+        }
+
+        btnDisplayList.setOnClickListener {
+            displayAll()
+        }
+
+        btnFilterList.setOnClickListener {
+            displayFiltered()
+        }
 
         //Button to return to the Main Activity Screen
         btnReturn.setOnClickListener {
